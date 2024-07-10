@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nav">
+        <ul class="block1">
+            <li class="parent">Eflyer</li>
+        </ul>
+        <ul class="block2">
+            <li class="parent">
+                <a href="/" id="link">login</a>
+            </li>         
+        </ul>
+    </nav>
+    {% if msg %}
+    <p>{{msg}}</p>
+{% endif %}
+    <div id="box">
+        <div id="reg">
+            <h1>REGISTRATION</h1>
+            <form action="/Sign_Up"  method="post">
+            <div class="reg_ele" >
+                <label for="">NAME:</label>
+                <input type="text" name="name" id=""><br>
+
+                <label for="">EMAIL:</label>
+                <input type="email" name="email" id=""><br>
+
+                <label for="">PhoneNo:</label>
+                <input type="text" name="phoneno" id=""><br>
+
+                <label for="">Address:</label>
+                <input type="text" name="Address" id=""><br>
+
+                <label for="">password</label>
+                <input type="text" name="password" id=""> <br>
+
+                <label for=""></label>
+                <input type="submit" value="SUBMIT" id="submit"><br>
+            </div>
+            </form>
+            </div>
+
+                <div id="login">
+                    <h1>LOGIN</h1>
+                    <form action="/Sign_in"  method="post">
+                    <div>
+                        <label for="">Email:</label>
+                        <input type="text" name="email" id="name"><br>
+        
+                        <label for="">PASSWORD:</label>
+                        <input type="password" name="password" id="pass"><br>
+        
+                        <label for=""></label>
+                        <input type="submit" value="SUBMIT" id="submit"><br>
+                   </div>
+                    </form>
+                </div>       
+            </div>
+            
+        </form>
+        </div>
+    </div>
+</body>
+</html>
